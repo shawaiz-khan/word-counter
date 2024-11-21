@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Word Counter - Count Words of the Text",
+    "version": "1.0.0",
+    "description": "A simple extension to count words on a webpage.",
+    "icons": {
+        "48": "images/48-01.png",
+        "128": "images/128-01.png"
+    },
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "images/48-01.png"
+    }
+}

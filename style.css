@@ -14,7 +14,7 @@
 }
 
 .main-container {
-    background-color: lightcoral;
+    background-color: var(--primary-bg);
     padding: 2rem;
     width: 20rem;
     height: 25rem;
@@ -22,13 +22,13 @@
 }
 
 .input-container {
-    background-color: red;
     height: 60%;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
 }
 
 .content {
@@ -47,12 +47,12 @@
 }
 
 .content::-webkit-scrollbar-track {
-    background: white;
+    background: var(--scrollbar-track);
     border-radius: 5px;
 }
 
 .content::-webkit-scrollbar-thumb {
-    background: lightgray;
+    background: var(--scrollbar-thumb);
     border-radius: 5px;
     cursor: pointer;
 }
