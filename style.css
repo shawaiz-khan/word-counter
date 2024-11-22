@@ -86,7 +86,13 @@ body {
     cursor: pointer;
 }
 
-.submit-button {
+.btn-conteiner {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.word-button,
+.letter-button {
     border: none;
     background: linear-gradient(90deg, var(--accent-color), #2563eb);
     width: 100%;
@@ -99,11 +105,13 @@ body {
     transition: transform 0.2s ease;
 }
 
-.submit-button:hover {
+.word-button:hover,
+.letter-button:hover {
     background: var(--accent-color);
     transform: scale(1.02);
 }
 
-.submit-button:focus {
+.word-button:focus,
+.letter-button:focus {
     outline: 2px solid var(--accent-color);
 }

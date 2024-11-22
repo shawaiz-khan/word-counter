@@ -2,8 +2,11 @@ class WordCounter {
     constructor() {
         this.content = document.getElementById('content');
         this.result = document.getElementById('result');
-        this.button = document.getElementById('submit-button');
-        this.button.addEventListener('click', () => this.countWords());
+        this.wordButton = document.getElementById('word-button');
+        this.letterButton = document.getElementById('letter-button');
+
+        this.wordButton.addEventListener('click', () => this.countWords());
+        this.letterButton.addEventListener('click', () => this.countLetters());
     }
 
     countWords() {
@@ -12,8 +15,18 @@ class WordCounter {
         this.displayResult(wordCount);
     }
 
+    countLetters() {
+        const text = this.content.value.trim();
+        let count = 0;
+        for (const letters in text) {
+            count++
+        }
+        this.displayResult(count);
+    }
+
     displayResult(count) {
-        this.result.textContent = `Word Count: ${count}`;
+        const type = this.wordButton.contains(document.activeElement) ? 'Word' : 'Letter';
+        this.result.textContent = `${type} Count: ${count}`;
     }
 }
 
